@@ -1,5 +1,10 @@
-const request = require('request-promise');
+const request = require("request-promise");
 
 const getGeekJoke = async () => {
-  // ha hahahh
+  const joke = await request(
+    `https://geek-jokes.sameerkumar.website/api?format=json`
+  );
+  return JSON.parse(joke).joke;
 };
+
+getGeekJoke().then((res) => console.log(res));

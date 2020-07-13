@@ -7,7 +7,7 @@ const getDadJoke = async () => {
       uri: `https://icanhazdadjoke.com/`,
       headers: { Accept: "application/json" },
     });
-    const parseJoke = JSON.parse(joke);
+    const parseJoke = JSON.parse(joke).joke;
     return parseJoke;
   } catch (err) {
     return err;

@@ -17,3 +17,5 @@ const getTronaldDumpQuote = async () => {
 getTronaldDumpQuote()
   .then((res) => console.log(res))
   .catch((err) => console.log(err));
+
+module.exports = { getTronaldDumpQuote };

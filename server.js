@@ -6,6 +6,10 @@ const morgan = require('morgan');
 
 const { handleJoke } = require('./handlers');
 
+const { getDadJoke } = require('./__workshop/exercise-4.1')
+const { getTronaldDumpQuote } = require('./__workshop/exercise-4.2')
+const { getGeekJoke } = require('./__workshop/exercise-4.3')
+
 express()
   .use(function (req, res, next) {
     res.header('Access-Control-Allow-Origin', '*');

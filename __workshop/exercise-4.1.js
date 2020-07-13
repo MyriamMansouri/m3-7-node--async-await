@@ -17,3 +17,5 @@ const getDadJoke = async () => {
 getDadJoke()
   .then((data) => console.log(data))
   .catch((err) => console.log(err));
+
+module.exports = { getDadJoke };

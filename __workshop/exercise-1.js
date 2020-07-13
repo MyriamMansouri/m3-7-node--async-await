@@ -20,11 +20,12 @@ const sortWords = (array) => {
 const textTransform = async (array) => {
   try {
     const allCapsArray = await makeAllCaps(array);
-    return await sortWords(allCapsArray);
+    const sortedArray = await sortWords(allCapsArray);
+    console.log(sortedArray);
   } catch (err) {
-    return err;
+    console.log(err);
   }
 };
 
-textTransform(["cucumber", "tomatos", "avocado"]).then(res => console.log(res));
-textTransform(["cucumber", 44, true]).then(res => console.log(res));;
+textTransform(["cucumber", "tomatos", "avocado"]);
+textTransform(["cucumber", 44, true]);

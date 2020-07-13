@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Jokes</title>
+        <link rel="stylesheet" href="styles.css" />
+        <link href="https://fonts.googleapis.com/css2?family=Grenze+Gotisch:wght@500&family=Lato&display=swap" rel="stylesheet">
+    </head>
+    <body>
+      <div class="wrapper">
+        <h1>Just jokin'!</h1>
+        <form id="joke-form" onchange="handleChange(event)">
+            <label for="joke-type">Choose a type of joke</label>
+            <select name="joke-type" id="joke-type">
+              <option value="dad">Dad</option>
+              <option value="tronald">Tronald</option>
+              <option value="geek">Geek</option>
+            </select>
+          </form>
+          <%- include("../partials/joke", { type }) -%>
+      </div>
+       
+    </body>
+    <script src="script.js" ></script>
+</html>

@@ -1,0 +1,22 @@
+body {
+    margin: 40px 60px;
+    font-family: 'Lato', sans-serif;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+h1{
+    font-family: 'Grenze Gotisch', cursive;
+    font-size: 10rem;
+    margin: 0;
+}
+
+.joke {
+    font-size: 3rem;
+    color:palevioletred;
+    text-align: center;
+}

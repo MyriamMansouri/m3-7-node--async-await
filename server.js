@@ -24,24 +24,30 @@ express()
   // endpoints
   .get("/joke/:type/", async (req, res) => {
     const type = req.params.type;
-    const types = ["dad", "tronald","geek"]
+    const types = ["dad", "tronald", "geek"];
     try {
       if (types.includes(type)) {
         res.status(200).json({
           status: 200,
-          joke: await handleJoke(type)
+          joke: await handleJoke(type),
         });
       } else {
         throw {
           status: 404,
-          joke: 'Unrecognized type of joke'
-        }
+          joke: "Unrecognized type of joke",
+        };
       }
-
-    } catch(err) {
+    } catch (err) {
       res.status(404).json(err);
     }
-
   })
+
+  .get("/make-me-laugh", async (req, res) => {
+    const type = req.query["joke-type"];
+    res.status(200).render("pages/joke-page.ejs", { type: await handleJoke(type) });
+  })
+
+
+
 
   .listen(8000, () => console.log(`Listening on port 8000`));

@@ -3,14 +3,14 @@ const { getDadJoke } = require('./__workshop/exercise-4.1')
 const { getTronaldDumpQuote } = require('./__workshop/exercise-4.2')
 const { getGeekJoke } = require('./__workshop/exercise-4.3')
 
-const handleJoke (type) => {
+const handleJoke = async (type) => {
     switch (type) {
         case "dad":
-            return getDadJoke();
+            return await getDadJoke();
         case "tronald":
-            return getTronaldDumpQuote();
+            return await getTronaldDumpQuote();
         case "geek": 
-            return getGeekJoke();
+            return await getGeekJoke();
         default:
             break;
     }
